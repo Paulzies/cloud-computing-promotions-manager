@@ -14,9 +14,9 @@ class ServiceFactory(BaseServiceFactory):
         #
         # TODO -- The terrible, hardcoding and hacking continues.
         #
-        if service_name == 'CourseResource':
-            result = course_resource.CourseResource(config=None)
-        elif service_name == 'CourseResourceDataService':
+        if service_name == 'RecommendationResource':
+            result = course_resource.RecommendationResource(config=None)
+        elif service_name == 'RecommendationDataService':
             context = dict(user="root", password="dbuserdbuser",
                            host="localhost", port=3306)
             data_service = MySQLRDBDataService(context=context)

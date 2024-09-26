@@ -41,7 +41,7 @@ class MySQLRDBDataService(DataDataService):
             connection = self._get_connection()
             cursor = connection.cursor()
             cursor.execute(sql_statement, [key_value])
-            result = cursor.fetchone()
+            result = cursor.fetchall()
         except Exception as e:
             if connection:
                 connection.close()
