@@ -18,7 +18,7 @@ class ServiceFactory(BaseServiceFactory):
             result = course_resource.PromotionsResource(config=None)
         elif service_name == 'PromotionsDataService':
             context = dict(user="root", password="dbuserdbuser",
-                           host="localhost", port=3306)
+                           host="localhost", port=7999)
             data_service = MySQLRDBDataService(context=context)
             result = data_service
         else:
